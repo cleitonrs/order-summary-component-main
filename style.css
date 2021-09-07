@@ -1,0 +1,179 @@
+:root {
+  /* Primary */
+  --paleBlue: hsl(255, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+  --veryPaleBlue: hsl(255, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+
+  /* 62.5% = 10px */
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.6rem;
+  background-image: url('./images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-color: var(--paleBlue);
+}
+
+.container {
+  max-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary {
+  max-width: 45rem;
+  height: 70rem;
+  background-color: var(--veryPaleBlue);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.summaryContents {
+  width: 35.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: var(--darkBlue);
+  padding-top: 5rem;
+  font-weight: 900;
+  font-size: 2.8rem;
+}
+
+p {
+  color: var(--desaturatedBlue);
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.5;
+}
+
+section {
+  width: 35.5rem;
+  height: 10rem;
+  border-radius: 1rem;
+  background-color: var(--paleBlue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem
+}
+
+section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section > div > img {
+  padding-right: 2rem;
+}
+
+section > div .plan::first-line {
+  font-weight: 900;
+  color: var(--darkBlue);
+}
+
+section > div .plan {
+  color: var(--desaturatedBlue); 
+}
+
+section a {
+  color: var(--brightBlue);
+  font-weight: 700;
+  transition: ease-in-out .2s;
+}
+
+section a:hover {
+  text-decoration: none;
+  color: var(--desaturatedBlue);
+}
+
+button.confirm {
+  width: 35.5rem;
+  height: 5rem;
+  background-color: var(--brightBlue);
+  border: none;
+  box-shadow: 1px 15px 10px 5px var(--paleBlue);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 3.2rem 0;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: ease-in-out .2s;
+}
+
+button.confirm:hover {
+  background-color: var(--desaturatedBlue);
+}
+
+button.cancel {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--desaturatedBlue);
+  padding-bottom: 2rem;
+  transition: ease-in-out .2s;
+
+}
+
+button.cancel:hover {
+  color: var(--darkBlue);
+}
+
+@media (max-width: 450px) {
+  body {
+    background-image: url('./images/pattern-background-mobile.svg');
+    font-size: 1.4rem;
+  }
+
+  .summary {
+    max-width: 33rem;
+    height: 57rem;
+  }
+
+  header img {
+    height: 16rem;
+  }
+
+  h1 {
+    padding-top: 3.5rem;
+  }
+
+  .summaryContents,
+  section,
+  button.confirm {
+    width: 28rem;
+  }
+
+  section {
+    height: 8rem;
+    padding: 1.4rem;
+  }
+
+  button.confirm {
+    margin: 2.5rem 0;
+  }
+}

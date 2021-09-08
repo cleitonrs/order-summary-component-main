@@ -92,8 +92,7 @@ section > div .plan::first-line {
   color: var(--darkBlue);
 }
 
-section > div .plan > p {
-  display: contents;
+section > div .plan  {
   color: var(--desaturatedBlue); 
 }
 
